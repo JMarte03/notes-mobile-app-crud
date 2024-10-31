@@ -34,4 +34,4 @@ Este proyecto me permitió profundizar en el uso de Firebase para el almacenamie
 ## Ejemplos de Otros Proyectos:
 
 - **Password Generator:** 
-- **Random Background Changer:** 
+- **Random Background Changer:** https://github.com/JMarte03/random-background-generator
