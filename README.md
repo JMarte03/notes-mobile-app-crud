@@ -12,6 +12,7 @@ Esta es una aplicación CRUD sencilla en React Native, desarrollada con Expo, qu
 ### Descripción:
 
 - **React Native:** Plataforma principal para desarrollar la interfaz y manejar la lógica de la aplicación.
+- **Expo**: Framework para el desarrollo de aplicaciones en React Native de forma rápida y sencilla.
 - **Firebase:** Base de datos en tiempo real para almacenar las notas.
 - **DateTimePicker:** Para permitir la selección de fechas y horas al agregar una nueva nota.
 - **React-Navigation:** Para manejar la navegación entre pantallas de manera fácil e intuitiva.
