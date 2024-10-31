@@ -7,7 +7,7 @@ Esta es una aplicación CRUD sencilla en React Native que permite a los usuarios
 
 ## Tecnologías Utilizadas:
 
-**Tecnologías:** React Native, Firebase, DateTimePicker, React-Navigation, React Elements
+**Tecnologías:** React Native,  <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black" />
 
 ### Descripción:
 
