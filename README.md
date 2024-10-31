@@ -7,7 +7,7 @@ Esta es una aplicación CRUD sencilla en React Native que permite a los usuarios
 
 ## Tecnologías Utilizadas:
 
-**Tecnologías:** React Native,  <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black" />
+**Tecnologías:** <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black" />
 
 ### Descripción:
 
