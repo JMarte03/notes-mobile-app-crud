@@ -1,7 +1,9 @@
-import { Text, StyleSheet, View, TextInput, TouchableOpacity} from "react-native";
+import { Text, StyleSheet, View, TextInput, TouchableOpacity, Alert} from "react-native";
 import React, { Component, useState, useEffect } from "react";
 import DateTimePicker  from "@react-native-community/datetimepicker";
-import {Platform} from "react-native";
+import appFirebase from "../Credenciales";
+import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoct } from "firebase/firestore";
+const db = getFirestore(appFirebase)
 
 export default function CreateNotes(props) {
   
@@ -49,12 +51,42 @@ export default function CreateNotes(props) {
     setMode(currentDate)
   }
 
+  const handleChangeText = (value, name) => {
+    setEstado({...estado, [name]:value}) // Para poder guardar las variables sin que se sobreescriban
+  }
+
+  const saveNote = async()=>{
+    try {
+      if(estado.title === '' || estado.title === ''){
+        Alert.alert('mensaje importante', 'debes rellenar el campo requerido')
+      } else {
+          const nota = {
+            titulo: estado.title,
+            detalle: estado.detail,
+            fecha: fecha,
+            hora: hora
+        }
+        await addDoc(collection(db, 'notas'), {
+          ...nota
+        })
+        Alert.alert('Exito', 'guardado con éxtio')
+        props.navigation.navigate('Notas') //redirigir a la sección de notas
+      }
+    } catch (error) {
+      console.log(error)
+    }
+    
+    // console.log(nota)
+  }
+
   return (
     <View style={styles.parentCtn}>
       <View style={styles.card} >
         <View style={styles.ctn}>
-          <TextInput placeholder="Ingresa el título" style={styles.txtInput} />
-          <TextInput placeholder="Ingresa descripción" multiline={true} numberOfLines={4} style={styles.txtInput} />
+
+          {/* handleChangeText captura el valor introducido en el input */}
+          <TextInput placeholder="Ingresa el título" style={styles.txtInput} value={estado.title} onChangeText={(value)=>handleChangeText(value, 'title')}  /> 
+          <TextInput placeholder="Ingresa descripción" multiline={true} numberOfLines={4} style={styles.txtInput} value={estado.detail} onChangeText={(value)=>handleChangeText(value, 'detail')} />
 
           {/* date container */}
           <View style={styles.dateTimeCtn}>
@@ -86,7 +118,7 @@ export default function CreateNotes(props) {
 
           {/* Submit button */}
           <View>
-            <TouchableOpacity style={styles.submitButton}>
+            <TouchableOpacity style={styles.submitButton} onPress={saveNote} >
               <Text style={styles.submitBtnTxt}>Guardar</Text>
             </TouchableOpacity>
           </View>
