@@ -32,7 +32,7 @@ En futuras versiones, se podría agregar la funcionalidad de editar notas y mejo
 
 Este proyecto me permitió profundizar en el uso de Firebase para el almacenamiento en tiempo real y la integración de bibliotecas en React Native utilizando Expo. También fortalecí mis habilidades en la gestión de navegación y manipulación de datos en una app móvil.
 
-## Ejemplos de Otros Proyectos:
+## 📱  Ejemplos de Otros Proyectos:
 
-- **Password Generator:** 
+- **Password Generator:** https://github.com/JMarte03/password-generator
 - **Random Background Changer:** https://github.com/JMarte03/random-background-generator
