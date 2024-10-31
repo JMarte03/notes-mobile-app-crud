@@ -1,6 +1,6 @@
 # App de Notas
 
-Esta es una aplicación CRUD sencilla en React Native que permite a los usuarios crear, ver y eliminar notas.
+Esta es una aplicación CRUD sencilla en React Native, desarrollada con Expo, que permite a los usuarios crear, ver y eliminar notas. 
 
 ![Diseño sin título (7)](https://github.com/user-attachments/assets/2578951c-a710-4123-b60e-80361988aef3)
 
