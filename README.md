@@ -1,11 +1,11 @@
-# App de Notas
+# 📝  App de Notas
 
 Esta es una aplicación CRUD sencilla en React Native, desarrollada con Expo, que permite a los usuarios crear, ver y eliminar notas. 
 
 ![Diseño sin título (7)](https://github.com/user-attachments/assets/2578951c-a710-4123-b60e-80361988aef3)
 
 
-## Tecnologías Utilizadas:
+## 💻  Tecnologías Utilizadas:
 
 <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white" /> <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black" />
 
@@ -24,11 +24,11 @@ Esta es una aplicación CRUD sencilla en React Native, desarrollada con Expo, qu
 - **Ver notas:** Una lista de todas las notas creadas, mostrando cada título y contenido.
 - **Eliminar notas:** Los usuarios pueden eliminar una nota de la lista.
 
-## Optimización
+## 🔧  Optimización
 
 En futuras versiones, se podría agregar la funcionalidad de editar notas y mejorar la interfaz para hacerlo más intuitivo. Además, se podría implementar un sistema de búsqueda para encontrar notas específicas y agregar categorías.
 
-## Lecciones Aprendidas:
+## 🧠  Lecciones Aprendidas:
 
 Este proyecto me permitió profundizar en el uso de Firebase para el almacenamiento en tiempo real y la integración de bibliotecas en React Native utilizando Expo. También fortalecí mis habilidades en la gestión de navegación y manipulación de datos en una app móvil.
 
