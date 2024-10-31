@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View, TextInput, TouchableOpacity, Alert} from "react-native";
+import { Text, StyleSheet, View, TextInput, TouchableOpacity, Alert, ScrollView} from "react-native";
 import React, { Component, useState, useEffect } from "react";
 import DateTimePicker  from "@react-native-community/datetimepicker";
 import appFirebase from "../Credenciales";
@@ -69,7 +69,7 @@ export default function CreateNotes(props) {
         await addDoc(collection(db, 'notas'), {
           ...nota
         })
-        Alert.alert('Exito', 'guardado con éxtio')
+        Alert.alert('Éxito', 'Nota guardada con éxtio')
         props.navigation.navigate('Notas') //redirigir a la sección de notas
       }
     } catch (error) {
@@ -86,21 +86,21 @@ export default function CreateNotes(props) {
 
           {/* handleChangeText captura el valor introducido en el input */}
           <TextInput placeholder="Ingresa el título" style={styles.txtInput} value={estado.title} onChangeText={(value)=>handleChangeText(value, 'title')}  /> 
-          <TextInput placeholder="Ingresa descripción" multiline={true} numberOfLines={4} style={styles.txtInput} value={estado.detail} onChangeText={(value)=>handleChangeText(value, 'detail')} />
+          <TextInput placeholder="Ingresa la descripción" multiline={true} numberOfLines={4} style={styles.txtInput} value={estado.detail} onChangeText={(value)=>handleChangeText(value, 'detail')} />
 
           {/* date container */}
           <View style={styles.dateTimeCtn}>
-            <TextInput placeholder="Fecha" style={styles.dateTimeInput} value={fecha} />
+            <TextInput placeholder="Ingresa la fecha" style={styles.dateTimeInput} value={fecha} />
             <TouchableOpacity style={styles.dateTimeBtn} onPress={()=>showMode('date')}>
-              <Text style={styles.subtitle}>Date</Text>
+              <Text style={styles.subtitle}>🗓️</Text>
             </TouchableOpacity>
           </View>
 
           {/* time container */}
           <View style={styles.dateTimeCtn}>
-            <TextInput placeholder="Hora" style={styles.dateTimeInput} value={hora} />
+            <TextInput placeholder="Ingresa la hora" style={styles.dateTimeInput} value={hora} />
             <TouchableOpacity style={styles.dateTimeBtn} onPress={()=>showMode('time')}>
-              <Text style={styles.subtitle}>Hour</Text>
+              <Text style={styles.subtitle}>🕓</Text>
             </TouchableOpacity>
           </View>
 
@@ -119,7 +119,7 @@ export default function CreateNotes(props) {
           {/* Submit button */}
           <View>
             <TouchableOpacity style={styles.submitButton} onPress={saveNote} >
-              <Text style={styles.submitBtnTxt}>Guardar</Text>
+              <Text style={styles.submitBtnTxt}>GUARDAR</Text>
             </TouchableOpacity>
           </View>
 
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
   },
   dateTimeBtn: {
-    backgroundColor: '#F0A8D0',
+    backgroundColor: '#FFEBD4',
     borderRadius: 10,
     padding: 10,
   },
@@ -185,12 +185,9 @@ const styles = StyleSheet.create({
     fontSize: 18
   },
   submitButton: {
-    backgroundColor: '#B71375',
-    borderColor: '#FC4F00',
-    borderWidth: 3,
-    borderRadius: 20,
-    marginLeft: 20,
-    marginRight: 20,
+    width: '100%',
+    backgroundColor: '#F7B5CA',
+    borderRadius: 10,
     marginTop: 20
   },
   submitBtnTxt: {
